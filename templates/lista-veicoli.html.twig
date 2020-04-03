@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{nome}} store </title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.5/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.5/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+    <div class="uk-container">
+        <div class="">
+            <h1>Welcome into {{nome}} store</h1>
+
+            <button class="uk-button uk-button-default" type="button">Filtra</button>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-dropdown-nav">
+                    <li class="uk-nav-header">Filtri</li>
+                    <li><a href="lista?filter=tipo&value=auto&orientation=asc&sort=id"> Filtra per Auto </a></li>
+                    <li><a href="lista?filter=marca&value=Audi&orientation=asc&sort=id"> Filtra per Audi </a></li>
+                    <li><a href="lista?filter=marca&value=Bmw&orientation=asc&sort=id"> Filtra per Bmw </a></li>
+                    <li><a href="lista?filter=marca&value=Mercedes&orientation=asc&sort=id"> Filtra per Mercedes </a></li>
+                    <li><a href="lista?filter=marca&value=Nissan&orientation=asc&sort=id"> Filtra per Nissan </a></li>
+                    <li><a href="lista?filter=marca&value=Renault&orientation=asc&sort=id"> Filtra per Renault </a></li>
+                    <li><a href="lista?filter=marca&value=Volkswagen&orientation=asc&sort=id"> Filtra per Volkswagen </a></li>
+                    <li><a href="lista?filter=tipo&value=moto&orientation=asc&sort=id"> Filtra per Moto </a></li>
+                    <li><a href="lista?filter=marca&value=Honda&orientation=asc&sort=id"> Filtra per Honda </a></li>
+                    <li><a href="lista?filter=marca&value=Harley&orientation=asc&sort=id"> Filtra per Harley </a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="lista"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Cancella Filtro</a></li>
+                  
+                </ul>
+            </div>
+            <div class="">
+                <table class="uk-table uk-table-striped uk-table-hover">
+                    <thead>
+                        <tr>
+                            <td>tipo
+                            <a href="lista{{ filter }}&sort=tipo">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>id
+                            <a href="lista{{ filter }}&sort=id">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+                            
+                            <td>tipologia
+                            <a href="lista{{ filter }}&sort=tipologia">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>marca
+                            <a href="lista{{ filter }}&sort=marca">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>modello
+                            <a href="lista{{ filter }}&sort=modello">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>potenza
+                            <a href="lista{{ filter }}&sort=potenza">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                             <td>prezzo
+                            <a href="lista{{ filter }}&sort=prezzo">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                             <td>peso
+                            <a href="lista{{ filter }}&sort=peso">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                             <td>porte
+                            <a href="lista{{ filter }}&sort=porte">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>cilindrata
+                            <a href="lista{{ filter }}&sort=cilindrata">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>cx
+                            <a href="lista{{ filter }}&sort=cx">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                            <td>co2
+                            <a href="lista{{ filter }}&sort=co2">
+                                    
+                                    <svg width="20px" height="20px" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="sort" class="svg-inline--fa fa-sort fa-w-10"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                        </path>
+                                    </svg>
+                                    
+                                </a>
+                            </td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in tabella %}
+                        <tr>
+                            <td>{{ item.tipo }}</td>
+                            <td><a href="veicolo?id={{ item.getid() }}">{{ item.getid() }}</td>
+                            <td>{{ item.tipologia }}</td>
+                            <td>{{ item.marca }}</td>
+                            <td>{{ item.modello }}</td>
+                            <td>{{ item.potenza }}</td>
+                            <td>{{ item.prezzo }}</td>
+                            <td>{{ item.peso }}</td>
+                            <td>{{ item.porte }}</td>
+                            <td>{{ item.cilindrata }}</td>
+                            <td>{{ item.cx }}</td>
+                            <td>{{ item.co2 }}</td>
+                        </tr>
+                        {% endfor %}
+
+
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

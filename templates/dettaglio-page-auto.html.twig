@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Welcome into majkl store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+</head>
+
+</html>
+
+<body>
+    <div class="container">
+        <div uk-alert>
+
+            <ul class="uk-breadcrumb">
+                <li> <a href="lista">Pagina Home</a></li>
+                <li><a href="auto-form"> Form per inserire auto</a></li>
+                <li> <a href="moto-form"> Form per inserire moto</a></li>
+            </ul>
+        </div>
+
+
+
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+            <h3 class="uk-card-title">Dettaglio Auto</h3>
+            <p>Stanco di cercare? Sei venuto nel posto giusto!</p>
+            <div>
+                <h4><strong>Marca:</strong> {{ item.getMarca() }}</h4>
+                <ul class="uk-list uk-list-large uk-list-striped">
+                    <li><strong>ID:</strong> {{ item.getId() }}</li>
+                    <li><strong>Tipo:</strong> {{ item.getTipo() }}</li>
+                    <li><strong>Modello:</strong> {{ item.getModello() }} </li>
+                    <li><strong>Tipologia:</strong> {{ item.getTipologia() }}</li>
+                    <li><strong>Potenza:</strong> {{ item.getPotenza() }}</li>
+                    <li><strong>Prezzo:</strong> {{ item.getPrezzo() }} </li>
+                    <li><strong>Peso:</strong> {{ item.getPeso() }} </li>
+                    <li><strong>Cilindrata:</strong> {{ item.getCilindrata() }} </li>
+                    <li><strong>Cx:</strong> {{ item.getCx() }} </li>
+                    <li><strong>CO2:</strong> {{ item.getCO2() }} </li>
+                    <li><strong>Porte:</strong> {{ item.getPorte() }}</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

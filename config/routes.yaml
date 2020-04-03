@@ -1,0 +1,15 @@
+lista_veicolo:
+    path: /lista
+    controller: App\Controller\VeicoloController::getVeicoli
+
+single_vehicle:
+    path: /veicolo
+    controller: App\Controller\VeicoloController::getVeicolo
+
+form_auto:
+    path: /auto-form
+    controller: App\Controller\FormAutoController::formAuto
+
+moto_form:
+    path: /moto-form
+    controller: App\Controller\FormMotoController::formMoto
